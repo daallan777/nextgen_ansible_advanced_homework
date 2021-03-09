@@ -1,12 +1,17 @@
 ---
 # vars file for roles/config-tower
-org_name: Default 
-scm_branch: master 
+org_name: Default
+scm_branch: master
 scm_url: "{{ github_repo }}"
 proj_name: "00_Homework Assignment"
-user_name: admin 
+user_name: admin
 password: r3dh4t1!
-ssh_cred_name: "Connect_to_workstation"
+opentlc_login: daallan@redhat.com
+opentlc_password: P@ssw0rd
+param_repo_base: https://github.com/daallan777/nextgen_ansible_advanced_homework
+github_repo: https://github.com/daallan777/nextgen_ansible_advanced_homework
+path_to_opentlc_key: /root/.ssh/mykey.pem
+sh_cred_name: "Connect_to_workstation"
 user_cred_name: "cloud-user"
 user_cred_path: "/root/.ssh/openstack.pem"
 static_inventory_name: scm_inventory
@@ -41,4 +46,5 @@ job_template_name_3tier_app_aws: "09_3 tier app on Prod"
 aws_cred_name: "Creds for AWS instances"
 job_template_smoke_aws: "10_Smoke test Prod env"
 aws_smoke_app_playbook: site-smoketest-aws.yml
+
 
