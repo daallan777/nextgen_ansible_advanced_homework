@@ -14,7 +14,7 @@ tower_GUID: b73c
 param_repo_base: https://github.com/daallan777/nextgen_ansible_advanced_homework
 github_repo: https://github.com/daallan777/nextgen_ansible_advanced_homework
 path_to_opentlc_key: /root/.ssh/mykey.pem
-sh_cred_name: "Connect_to_workstation"
+ssh_cred_name: "Connect_to_workstation"
 user_cred_name: "cloud-user"
 user_cred_path: "/root/.ssh/openstack.pem"
 static_inventory_name: scm_inventory
