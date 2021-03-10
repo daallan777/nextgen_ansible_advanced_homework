@@ -1,0 +1,30 @@
+---
+- name: Install Postgres packages
+  package:
+    name: postgresql-server
+    state: present
+
+
+- name: Check if Postgres initialized
+  stat:
+    path: "/var/lib/pgsql/data/PG_VERSION"
+  register: r_postgres_init_dir_state
+
+- when: not r_postgres_init_dir_state.stat.exists
+  name: Run Postgres initdb to initialize if postgres not initialized
+  command: "su - postgres -c 'initdb -D /var/lib/pgsql/data'"
+  notify: restart_postgres
+
+
+- name: Setup Postgres to listen on network interfaces
+  lineinfile:
+    dest: "/var/lib/pgsql/data/postgresql.conf"
+    line: "listen_addresses = '*'"
+    insertafter: "#listen_addresses"
+  notify: restart_postgres
+
+- name: Setup Postgres as started and enabled on boot.
+  service:
+    name: "postgresql"
+    state: "started"
+    enabled: "true"
