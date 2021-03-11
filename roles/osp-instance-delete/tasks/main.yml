@@ -3,7 +3,9 @@
 - name: Fetch Instance Info
   os_server_info:
     cloud: openstack
-  register: servers
+  register: result
+  
+- debug: var=result
 
 - name: Delete instances
   os_server:
