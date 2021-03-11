@@ -1,7 +1,6 @@
 ---
 
-# tasks file for osp.servers
-
+# osp.servers tasks file
 - name: Create instances
   os_server:
     cloud: openstack
