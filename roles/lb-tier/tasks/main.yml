@@ -1,5 +1,4 @@
 ---
-
 - name: Install load balancer packages
   package:
     name: "{{ payload }}"
@@ -13,6 +12,6 @@
 
 - name: Enable Haproxy
   service:
-    name: "{{ payload }}"
+    name: haproxy
     state: started
     enabled: true
