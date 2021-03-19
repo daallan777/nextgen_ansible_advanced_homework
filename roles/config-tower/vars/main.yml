@@ -11,7 +11,7 @@ opentlc_password: P@ssw0rd
 osp_GUID: bd49
 osp_DOMAIN: dynamic.opentlc.com
 tower_GUID: b73c
-#param_repo_base: https://github.com/daallan777/nextgen_ansible_advanced_homework
+param_repo_base: https://www.opentlc.com/download/ansible_bootcamp
 github_repo: https://github.com/daallan777/nextgen_ansible_advanced_homework
 path_to_opentlc_key: /root/.ssh/mykey.pem
 ssh_cred_name: "Connect_to_workstation"
